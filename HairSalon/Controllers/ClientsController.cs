@@ -20,5 +20,13 @@ namespace HairSalon.Controllers
             List<Client> model = _db.Clients.ToList();
             return View(model);
         }
+
+        [HttpPost]
+        public ActionResult Create(Client client)
+        {
+            _db.Clients.Add(client);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
