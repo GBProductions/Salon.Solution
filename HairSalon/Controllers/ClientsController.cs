@@ -55,11 +55,11 @@ namespace HairSalon.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Delete(int id)
-        {
-            var thisClient = _db.Clients.FirstOrDefault(Client.ClientId == id);
-            return View(thisClient);
-        }
+        // public ActionResult Delete(int id)
+        // {
+        //     var thisClient = _db.Clients.FirstOrDefault(Client.ClientId == id);
+        //     return View(thisClient);
+        // }
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
