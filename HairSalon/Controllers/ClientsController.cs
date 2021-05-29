@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using HairSalon.Models;
@@ -21,12 +22,23 @@ namespace HairSalon.Controllers
             return View(model);
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Create(Client client)
         {
             _db.Clients.Add(client);
             _db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Details(int id)
+        {
+            Client thisClient = _db.Clients.FirstOrDefault(Client => Client.ClientId == id);
+            return View(thisClient);
         }
 
         public ActionResult Edit(int id)
@@ -39,6 +51,21 @@ namespace HairSalon.Controllers
         public ActionResult Edit(Client client)
         {
             _db.Entry(client).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var thisClient = _db.Clients.FirstOrDefault(Client.ClientId == id);
+            return View(thisClient);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            var thisClient = _db.Clients.FirstOrDefault(Client => Client.ClientId == id);
+            _db.Clients.Remove(thisClient);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
