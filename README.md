@@ -2,13 +2,12 @@
 
 #### _A program to allow the salon to keep track of stylists and clients._
 ##### _Date Created: May 22nd 2021_
-##### _Date Updated: May 22nd 2021_
+##### _Date Updated: May 28th 2021_
 
 #### By _**Garrett Brown**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
 
 ## Setup/Installation Requirements
 
