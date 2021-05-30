@@ -1,4 +1,4 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
@@ -12,9 +12,14 @@
 {
   @Html.HiddenFor(model => model.ClientId)
 
+  @Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)
   @Html.LabelFor(model => model.Description)
   @Html.EditorFor(model => model.Description)
 
+    @Html.LabelFor(model => model.Stylist)
+    @Html.DropDownList("StylistId")
+
   <input type="submit" value="Save" />
 }
-<p>@Html.ActionLink("Back to list", "Index")</p> *@
+<p>@Html.ActionLink("Back to list", "Index")</p>

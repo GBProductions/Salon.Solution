@@ -18,12 +18,13 @@ namespace HairSalon.Controllers
 
         public ActionResult Index()
         {
-            List<Client> model = _db.Clients.ToList();
+            List<Client> model = _db.Clients.Include(client => client.Stylist).ToList();
             return View(model);
         }
 
         public ActionResult Create()
         {
+            ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
             return View();
         }
 
@@ -37,13 +38,14 @@ namespace HairSalon.Controllers
 
         public ActionResult Details(int id)
         {
-            Client thisClient = _db.Clients.FirstOrDefault(Client => Client.ClientId == id);
+            Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
             return View(thisClient);
         }
 
         public ActionResult Edit(int id)
         {
-            var thisClient = _db.Clients.FirstOrDefault(Client => Client.ClientId == id);
+            var thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+            ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
             return View(thisClient);
         }
 
@@ -55,16 +57,16 @@ namespace HairSalon.Controllers
             return RedirectToAction("Index");
         }
 
-        // public ActionResult Delete(int id)
-        // {
-        //     var thisClient = _db.Clients.FirstOrDefault(Client.ClientId == id);
-        //     return View(thisClient);
-        // }
+        public ActionResult Delete(int id)
+        {
+            var thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+            return View(thisClient);
+        }
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            var thisClient = _db.Clients.FirstOrDefault(Client => Client.ClientId == id);
+            var thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
             _db.Clients.Remove(thisClient);
             _db.SaveChanges();
             return RedirectToAction("Index");
