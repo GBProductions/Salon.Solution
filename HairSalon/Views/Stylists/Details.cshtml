@@ -2,6 +2,7 @@
   Layout = "_Layout";
 }
 
+@using HairSalon.Models;
 @model HairSalon.Models.Stylist;
 
 <h2>Stylist Details</h2>
@@ -9,6 +10,11 @@
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 <h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h3>
 
-
+<ul>
+  @foreach (var Clients in Model.Clients)
+  {
+    <li>@Clients.Name</li>
+  }
+</ul>
 <p>@Html.ActionLink("Edit Stylist", "edit", new { id = Model.StylistId })</p>
 <p>@Html.ActionLink("Delete Stylist", "delete", new { id = Model.StylistId })</p>
