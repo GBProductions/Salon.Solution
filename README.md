@@ -34,7 +34,9 @@ _A program that allows Eau Claire's Salon to keep track of Stylists and Clients.
 * _Build project with git command `dotnet build`_
 * _To run program, run git command `dotnet run`_
 
-### Recreate  
+### Recreate Database
+
+![Schema](/assets/images/tables.png)
 
 ## Known Bugs
 
