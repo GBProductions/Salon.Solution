@@ -1,8 +1,8 @@
 # _Eau Claire's Salon_
 
- _A program to allow Eau Claire's Salon to keep track of stylists and clients._
- _Date Created: May 22nd 2021_
- _Date Updated: May 31st 2021_
+ * _A program to allow Eau Claire's Salon to keep track of stylists and clients._
+ * _Date Created: May 22nd 2021_
+ * _Date Updated: May 31st 2021_
 
 #### By _**Garrett Brown**_
 
@@ -30,14 +30,14 @@ Table of Contents
 * Startup
 
 <details>
-    <summary>Expand</summary>
+    <summary>Expand for Instructions</summary>
 
 ### Required Programs
 1. An internet browser.
 2. Visual Code Studio (or another code editor).
 3. .NET
 4. MySQL
-5. MySQL Workbench
+5. MySQLWorkbench
 
 
 ### Installation of Program
@@ -64,11 +64,13 @@ Table of Contents
 }
 ```
 
-4. Replace `YOUR-PASSWORD` with `epicodus`.
+4. Replace `YOUR-PASSWORD` with password you selected when installing MySQLWorkbench.
 5. Replace `YOUR-DATABASE` with `garrett_brown`.
 
-#### MySQL Workbench Recreate Database
-1. In MySQL Workbench, create new schema. Name new schema `garrett_brown`.
+#### MySQLWorkbench Recreate Database
+If you need to recreate the database, follow these instructions.
+
+1. In MySQLWorkbench, create new schema. Name new schema `garrett_brown`.
 2. Add new table named `stylists`. Recreate the table here:
 
 ![Schema](HairSalon/assets/images/stylists.png)
@@ -84,7 +86,7 @@ Table of Contents
 7. Select `garrett_brown`, and select `Dump Structure Only`. 
 8. Click `Export to Self-Contained File`, and click `...` button amd choose to save data on Desktop. Name file as `garrett_brown.sql`.
 9. Click `Start Export`. 
-10. Whem complete, add `garrett_brown.sql` to root directory of HairSalon.
+10. Whem complete, add `garrett_brown.sql` to root directory of "HairSalon".
 
 ### Startup
 * Navigate to HairSalon folder in project.
@@ -114,7 +116,7 @@ _For assistance, please contact Garrett Brown <garrettpaulbrown@gmail.com>_
 * _ASP.NET Core Razor Pages_
 * _HTML, CSS_
 * _MySQL_
-* _MyuSQL Workbench_
+* _MySQLWorkbench_
 
 
 ### License
