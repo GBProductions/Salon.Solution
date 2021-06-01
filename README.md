@@ -23,11 +23,17 @@ _A program that allows Eau Claire's Salon to keep track of Stylists and Clients.
 </details>
 
 ## Setup/Installation Requirements
+Table of Contents
+* Required Programs
+* Installation of Program
+* Recreate Database
+* Startup
 
 ### Required Programs
 1. An internet browser.
 2. Visual Code Studio (or another code editor).
 3. .NET
+4. MySQL Workbench
 
 
 ### Installation of Program
@@ -38,18 +44,37 @@ _A program that allows Eau Claire's Salon to keep track of Stylists and Clients.
 
 
 ### Recreate Database
+
+## Instructions: `appsettings.json` Creation
 ![Schema](HairSalon/assets/images/tables.png)
 
 1. Create a file in the root directory called `appsettings.json`. 
 2. Add `appsettings.json` to `.gitignore`.
 3. Insert the following code into `appsettings.json`:
-    `{
-        "ConnectionStrings": {
-            "DefaultConnection": "Server=localhost;Port=3306;database=YOUR-DATABASE;uid=root;pwd=YOUR-PASSWORD;"
-        }
-    }`
+    
+``` 
+{
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Port=3306;database=YOUR-DATABASE;uid=root;pwd=YOUR-PASSWORD;"
+    }
+}
+```
+
 4. Replace `YOUR-PASSWORD` with `epicodus`.
 5. Replace `YOUR-DATABASE` with `garrett_brown`.
+
+## MySQL Workbench Recreate Database
+1. In MySQL Workbench, create new schema. Name new schema `garrett_brown`.
+2. Add new table named `stylists`. Recreate the table here:
+
+![Schema](HairSalon/assets/images/stylists.png)
+
+3. After replicating the table, click `Apply` at the bottom of MySQLWorkbench. Review changes, and click `Apply` again. Click `Close` when done.
+
+4. Add new table named `clients`. Recreate the table here:
+![Schema](HairSalon/assets/images/clients.png)
+
+5. After replicating the table, click `Apply` at the bottom of MySQLWorkbench. Review changes, and click `Apply` again. Click `Close` when done.
 
 ### Startup
 * Navigate to HairSalon folder in project.
