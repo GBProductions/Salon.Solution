@@ -1,8 +1,8 @@
 # _Eau Claire's Salon_
 
-#### _A program to allow Eau Claire's Salon to keep track of stylists and clients._
-##### _Date Created: May 22nd 2021_
-##### _Date Updated: May 31st 2021_
+ _A program to allow Eau Claire's Salon to keep track of stylists and clients._
+ _Date Created: May 22nd 2021_
+ _Date Updated: May 31st 2021_
 
 #### By _**Garrett Brown**_
 
@@ -29,11 +29,15 @@ Table of Contents
 * Recreate Database
 * Startup
 
+<details>
+    <summary>Expand</summary>
+
 ### Required Programs
 1. An internet browser.
 2. Visual Code Studio (or another code editor).
 3. .NET
-4. MySQL Workbench
+4. MySQL
+5. MySQL Workbench
 
 
 ### Installation of Program
@@ -45,7 +49,7 @@ Table of Contents
 
 ### Recreate Database
 
-## Instructions: `appsettings.json` Creation
+#### Instructions: `appsettings.json` Creation
 ![Schema](HairSalon/assets/images/tables.png)
 
 1. Create a file in the root directory called `appsettings.json`. 
@@ -63,7 +67,7 @@ Table of Contents
 4. Replace `YOUR-PASSWORD` with `epicodus`.
 5. Replace `YOUR-DATABASE` with `garrett_brown`.
 
-## MySQL Workbench Recreate Database
+#### MySQL Workbench Recreate Database
 1. In MySQL Workbench, create new schema. Name new schema `garrett_brown`.
 2. Add new table named `stylists`. Recreate the table here:
 
@@ -76,12 +80,20 @@ Table of Contents
 
 5. After replicating the table, click `Apply` at the bottom of MySQLWorkbench. Review changes, and click `Apply` again. Click `Close` when done.
 
+6. When completed, navigate to `Administration` menu, and select `Data Export`.
+7. Select `garrett_brown`, and select `Dump Structure Only`. 
+8. Click `Export to Self-Contained File`, and click `...` button amd choose to save data on Desktop. Name file as `garrett_brown.sql`.
+9. Click `Start Export`. 
+10. Whem complete, add `garrett_brown.sql` to root directory of HairSalon.
+
 ### Startup
 * Navigate to HairSalon folder in project.
 * Restore project with git command `dotnet restore`
 * Build project with git command `dotnet build`
 * To run program, run git command `dotnet run`
 * In browser, navigate to http://localhost:5000 
+
+</details>
 
 ## Known Bugs
 
