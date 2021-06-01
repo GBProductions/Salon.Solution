@@ -24,19 +24,39 @@ _A program that allows Eau Claire's Salon to keep track of Stylists and Clients.
 
 ## Setup/Installation Requirements
 
-### Installation
+### Required Programs
+1. An internet browser.
+2. Visual Code Studio (or another code editor).
+3. .NET
 
+
+### Installation of Program
 * _Open the terminal on your local machine and navigate to "Desktop."_
 * _Clone "Salon.Solution"" with the following git command `git clone https://github.com/GBProductions/Salon.Solution.git`_
 * _Navigate to the top level of the repository with the command `cd Salon.Solution`_
 * _Navigate into "HairSalon" with git command `cd HairSalon`_
-* _Restore project with git command `dotnet restore`_
-* _Build project with git command `dotnet build`_
-* _To run program, run git command `dotnet run`_
+
 
 ### Recreate Database
-
 ![Schema](HairSalon/assets/images/tables.png)
+
+1. Create a file in the root directory called `appsettings.json`. 
+2. Add `appsettings.json` to `.gitignore`.
+3. Insert the following code into `appsettings.json`:
+    `{
+        "ConnectionStrings": {
+            "DefaultConnection": "Server=localhost;Port=3306;database=YOUR-DATABASE;uid=root;pwd=YOUR-PASSWORD;"
+        }
+    }`
+4. Replace `YOUR-PASSWORD` with `epicodus`.
+5. Replace `YOUR-DATABASE` with `garrett_brown`.
+
+### Startup
+* Navigate to HairSalon folder in project.
+* Restore project with git command `dotnet restore`
+* Build project with git command `dotnet build`
+* To run program, run git command `dotnet run`
+* In browser, navigate to http://localhost:5000 
 
 ## Known Bugs
 
@@ -49,7 +69,7 @@ _For assistance, please contact Garrett Brown <garrettpaulbrown@gmail.com>_
 ## Technologies Used
 
 * _Github, VS Code_
-* _Bootstrap_
+* _Bootstrap, MarkDown_
 * _Entity Framework_
 * _C#_
 * _.NET Core 5.0.1_
@@ -65,3 +85,5 @@ _For assistance, please contact Garrett Brown <garrettpaulbrown@gmail.com>_
 *Available under MIT Licensing*
 
 Copyright (c) 2021 **_Garrett Brown_**
+
+
