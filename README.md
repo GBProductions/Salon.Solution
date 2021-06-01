@@ -36,7 +36,7 @@ _A program that allows Eau Claire's Salon to keep track of Stylists and Clients.
 
 ### Recreate Database
 
-![Schema](/assets/images/tables.png)
+![Schema](HairSalon/assets/images/tables.png)
 
 ## Known Bugs
 
